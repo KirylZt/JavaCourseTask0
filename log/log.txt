@@ -1,1 +1,6 @@
-2022-02-10 08:39:09 [main] [main] [39] INFO  by.javacource.task0.main.Main - Max value > 21
+2022-02-14 16:15:39 [main] [main] [49] INFO  by.javacource.task0.main.Main - Max value of array1 -> 21
+2022-02-14 16:15:39 [main] [main] [51] INFO  by.javacource.task0.main.Main - Average value of array2 -> 3.0
+2022-02-14 16:15:39 [main] [main] [53] INFO  by.javacource.task0.main.Main - Value of negative numbers in array3 -> 4.0
+2022-02-14 16:15:45 [main] [main] [49] INFO  by.javacource.task0.main.Main - Max value of array1 -> 21
+2022-02-14 16:15:45 [main] [main] [51] INFO  by.javacource.task0.main.Main - Average value of array2 -> 3.0
+2022-02-14 16:15:45 [main] [main] [53] INFO  by.javacource.task0.main.Main - Value of negative numbers in array3 -> 2.0

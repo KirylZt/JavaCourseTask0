@@ -1,5 +1,7 @@
 package by.javacource.task0.main;
 
+import by.javacource.task0.creator.CustomCreator;
+import by.javacource.task0.creator.impl.CustomCreatorImpl;
 import by.javacource.task0.entity.CustomArray;
 import by.javacource.task0.exception.CustomException;
 import by.javacource.task0.parser.CustomParser;
@@ -10,11 +12,13 @@ import by.javacource.task0.service.CustomService;
 import by.javacource.task0.service.SortService;
 import by.javacource.task0.service.impl.CustomServiceImpl;
 import by.javacource.task0.service.impl.SortServiceImpl;
-import by.javacource.task0.validator.Validator;
-import by.javacource.task0.validator.impl.ValidatorImpl;
+import by.javacource.task0.validator.CustomValidator;
+import by.javacource.task0.validator.impl.CustomValidatorImpl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.List;
 
 
 public class Main {
@@ -25,18 +29,29 @@ public class Main {
 
         CustomFileReader customFileReader = new CustomFileReaderImpl();
         CustomParser parser = new CustomParserImpl();
-        Validator validator = new ValidatorImpl();
+        CustomValidator customValidator = new CustomValidatorImpl();
         CustomService service = new CustomServiceImpl();
         SortService sortService = new SortServiceImpl();
+        CustomCreator customCreator = new CustomCreatorImpl();
         try {
-            String line1 = customFileReader.readStringFromFile("src/main/resources/data/arrays.txt");
-            int[] intArr = parser.parse(line1);
-            CustomArray customArray = new CustomArray(intArr);
+            List<String> arrays = customFileReader.readStringFromFile("src/main/resources/data/arrays.txt");
+            String line1 = arrays.get(0);
+            String line2 = arrays.get(1);
+            int[] intArr1 = parser.parse(line1);
+            int[] intArr2 = parser.parse(line2);
+            int[] intArr3 = customCreator.randomArray(5,100);
+            CustomArray customArray1 = new CustomArray(intArr1);
+            CustomArray customArray2 = new CustomArray(intArr2);
+            CustomArray customArray3 = new CustomArray(intArr3);
             int resultInt;
             double resultDouble;
+            resultInt = service.findMaxValue(customArray1);
+            logger.info("Max value of array1 -> " + resultInt);
+            resultDouble = service.averageValue(customArray2);
+            logger.info("Average value of array2 -> " + resultDouble);
+            resultDouble = service.countNegativeElements(customArray3);
+            logger.info("Value of negative numbers in array3 -> " + resultDouble);
 
-            resultInt = service.findMaxValue(customArray);
-            logger.info("Max value -> " + resultInt);
 
         } catch (CustomException e) {
             e.printStackTrace();

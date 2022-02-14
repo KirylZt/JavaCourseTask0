@@ -1,0 +1,6 @@
+2022-02-14 16:13:20 [main] [main] [50] INFO  by.javacource.task0.main.Main - Max value of array1 -> 21
+2022-02-14 16:13:20 [main] [main] [52] INFO  by.javacource.task0.main.Main - Average value of array2 -> 3.0
+2022-02-14 16:13:25 [main] [main] [50] INFO  by.javacource.task0.main.Main - Max value of array1 -> 21
+2022-02-14 16:13:25 [main] [main] [52] INFO  by.javacource.task0.main.Main - Average value of array2 -> 3.0
+2022-02-14 16:13:33 [main] [main] [50] INFO  by.javacource.task0.main.Main - Max value of array1 -> 21
+2022-02-14 16:13:33 [main] [main] [52] INFO  by.javacource.task0.main.Main - Average value of array2 -> 3.0

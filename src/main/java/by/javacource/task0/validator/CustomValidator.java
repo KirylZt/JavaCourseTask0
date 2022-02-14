@@ -1,6 +1,6 @@
 package by.javacource.task0.validator;
 
-public interface Validator {
+public interface CustomValidator {
 
-    boolean validate(String StringAsIntArray);
+    boolean validateString(String StringAsIntArray);
 }

@@ -1,0 +1,1 @@
+2022-02-10 08:39:09 [main] [main] [39] INFO  by.javacource.task0.main.Main - Max value > 21
